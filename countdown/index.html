@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Countdown until 2021!!! :)</title>
+    <style media="screen">
+      p.text {
+          text-align:center;
+          font-size: 45px;
+          font-family: Calibri;
+      }
+
+      body{
+        background-color:#f8f8f6;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p id="demo" class="text"></p>
+
+    <script type="text/javascript">
+
+      var countDownDate = new Date("Jan 1, 2021 0:0:0").getTime();
+
+      var x = setInterval(function() {
+
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("demo").innerHTML = "Time until 2021: " + days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "HAPPY NEW YEAR :D";
+        }
+      }, 1000);
+
+    </script>
+
+    <img src="https://i.pinimg.com/originals/f6/9e/26/f69e26f643987ed429ee4f35eb070c7c.png" alt="BALLOONS!" width="326" height="674">
+    <img src="https://i.pinimg.com/originals/f6/9e/26/f69e26f643987ed429ee4f35eb070c7c.png" alt="BALLOONS!" width="326" height="674" style="float:right;">
+    <img src="https://i.pinimg.com/originals/cb/70/7e/cb707e33dc5b7ac49742f681cce2c161.jpg" alt="BALLOONS!" width="400" height="400" style="float:center;padding-bottom:100px;padding-left:400px;">
+  </body>
+</html>
